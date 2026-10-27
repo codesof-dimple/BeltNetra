@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --color-ink: #0a1220;
+  --color-panel: #101b2e;
+  --color-edge: #1e2d47;
+}
+
+html, body { background: var(--color-ink); color: #d6e2f3; overflow-x: hidden; }
+body { font-family: var(--font-sans); }
+
+@keyframes belt { to { stroke-dashoffset: -24; } }
+.belt-run { animation: belt 0.9s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .belt-run, .animate-pulse { animation: none; } }
